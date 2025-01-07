@@ -1,1 +1,1 @@
-print("hello from naresh moorthy s checking workflow + fail)
+print("hello from naresh moorthy s checking workflow + pass")
