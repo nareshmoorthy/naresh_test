@@ -18,4 +18,4 @@ jobs:
     steps:
       - name: Print message from manual trigger
         run: |
-          echo "Manually triggered workflow. Username: ${{ inputs.username }}, Message: ${{ inputs.message }}"
+          echo "Workflow_call triggered workflow. Username: ${{ inputs.username }}, Message: ${{ inputs.message }}"
