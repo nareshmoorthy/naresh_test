@@ -1,0 +1,13 @@
+name: Triggers check workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  trigger-syntax-check:
+    uses: ./.github/workflows/main-workflow.yml
+    with:
+      username: 'john_doe'
+      message: 'Hello from another workflow!'
