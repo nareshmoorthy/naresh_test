@@ -1,0 +1,21 @@
+name: Main Workflow
+
+on:
+  workflow_call:
+    inputs:
+      username:
+        description: 'Username to pass to child workflow'
+        required: true
+        type: string
+      message:
+        description: 'Custom message for the greeting'
+        required: true
+        type: string
+
+jobs:
+  call-child-workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print message from manual trigger
+        run: |
+          echo "Manually triggered workflow. Username: ${{ inputs.username }}, Message: ${{ inputs.message }}"
