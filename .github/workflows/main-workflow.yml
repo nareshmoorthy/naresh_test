@@ -13,9 +13,22 @@ on:
         type: string
 
 jobs:
-  call-child-workflow:
+  Python-Syntax-Check:
     runs-on: ubuntu-latest
     steps:
-      - name: Print message from manual trigger
+      
+      - name: Print message 
         run: |
           echo "Workflow_call triggered workflow. Username: ${{ inputs.username }}, Message: ${{ inputs.message }}"
+
+      
+      - name: Checkout code
+        uses: actions/checkout@v2
+        
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+           python-version: 3.x
+      
+      - name: Check syntax of Python files
+        run: python -m compileall .
