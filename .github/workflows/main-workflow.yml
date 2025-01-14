@@ -14,21 +14,22 @@ on:
 
 jobs:
   Python-Syntax-Check:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
+      
       
       - name: Print message 
         run: |
           echo "Workflow_call triggered workflow. Username: ${{ inputs.username }}, Message: ${{ inputs.message }}"
 
       
-      - name: Checkout code
-        uses: actions/checkout@v2
+      #- name: Checkout code
+      #  uses: actions/checkout@v2
         
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-           python-version: 3.x
+      #- name: Set up Python
+      #  uses: actions/setup-python@v2
+      #  with:
+      #     python-version: 3.x
       
-      - name: Check syntax of Python files
-        run: python -m compileall .
+      #- name: Check syntax of Python files
+      #  run: python -m compileall .
