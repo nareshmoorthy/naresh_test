@@ -19,7 +19,7 @@ jobs:
       
       
       - name: Print message 
-        uses: naresh_test/actions/action.yaml
+        uses: naresh_test/actions/action.yaml@main
 
       
       #- name: Checkout code
