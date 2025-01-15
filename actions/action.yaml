@@ -19,7 +19,7 @@ jobs:
       
       
       - name: Print message 
-        run: |
+        runs: |
           echo "Workflow_call triggered workflow"
 
       
