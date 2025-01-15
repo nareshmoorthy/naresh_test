@@ -1,0 +1,35 @@
+name: Main Workflow
+
+on:
+  workflow_call:
+    inputs:
+      username:
+        description: 'Username to pass to child workflow'
+        required: false
+        type: string
+      message:
+        description: 'Custom message for the greeting'
+        required: false
+        type: string
+
+jobs:
+  Python-Syntax-Check:
+    runs-on: naresh-test
+    steps:
+      
+      
+      - name: Print message 
+        run: |
+          echo "Workflow_call triggered workflow"
+
+      
+      #- name: Checkout code
+      #  uses: actions/checkout@v2
+        
+      #- name: Set up Python
+      #  uses: actions/setup-python@v2
+      #  with:
+      #     python-version: 3.x
+      
+      #- name: Check syntax of Python files
+      #  run: python -m compileall .
