@@ -1,1 +1,1 @@
-print("Simple python Script printing")
+print("Simple python Script printings")
