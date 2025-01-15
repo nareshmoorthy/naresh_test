@@ -14,10 +14,12 @@ on:
 
 jobs:
   Python-Syntax-Check:
-    runs-on: naresh-test
+    runs-on: latest-ubuntu
     steps:
       
-      
+      - name: Checkout repository
+        uses: actions/checkout@v2  # Checkout the repository to access the 'actions' directory
+
       - name: Print message 
         uses: ./actions
 
