@@ -19,8 +19,7 @@ jobs:
       
       
       - name: Print message 
-        run: |
-          echo "Workflow_call triggered workflow. Username: ${{ inputs.username }}, Message: ${{ inputs.message }}"
+        uses: naresh_test/actions/action.yaml
 
       
       #- name: Checkout code
