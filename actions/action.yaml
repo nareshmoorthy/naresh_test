@@ -14,7 +14,7 @@ on:
 
 jobs:
   Python-Syntax-Check:
-    runs-on: naresh-test
+    runs-on: latest-ubuntu
     steps:
       
       
