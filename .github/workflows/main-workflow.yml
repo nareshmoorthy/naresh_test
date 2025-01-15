@@ -14,7 +14,7 @@ on:
 
 jobs:
   Python-Syntax-Check:
-    runs-on: latest-ubuntu
+    runs-on: ubuntu-latest
     steps:
       
       - name: Checkout repository
