@@ -14,3 +14,4 @@ runs:
     - name: Print greeting
       run: |
         echo "Hello"
+      shell: bash  # Specify the shell to use for running the script
