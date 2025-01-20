@@ -1,6 +1,17 @@
 name: Main Workflow
 
 on:
+  workflow_dispatch:
+    inputs:
+      username:
+        description: 'Username to pass to the workflow'
+        required: false
+        type: string
+      message:
+        description: 'Custom message for the greeting'
+        required: false
+        type: string
+        
   workflow_call:
     inputs:
       username:
