@@ -1,35 +1,16 @@
-name: Main Workflow
+name: 'My Composite Action'
+description: 'This action runs a sequence of steps'
 
-on:
-  workflow_call:
-    inputs:
-      username:
-        description: 'Username to pass to child workflow'
-        required: false
-        type: string
-      message:
-        description: 'Custom message for the greeting'
-        required: false
-        type: string
+inputs:
+  username:
+    description: 'The name of the user'
+    required: false
 
-jobs:
-  Python-Syntax-Check:
-    runs-on: ubuntu-latest
-    steps:
-      
-      
-      - name: Print message 
-        runs: |
-          echo "Workflow_call triggered workflow"
-
-      
-      #- name: Checkout code
-      #  uses: actions/checkout@v2
-        
-      #- name: Set up Python
-      #  uses: actions/setup-python@v2
-      #  with:
-      #     python-version: 3.x
-      
-      #- name: Check syntax of Python files
-      #  run: python -m compileall .
+runs:
+  using: 'composite'
+  steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Print greeting
+      run: |
+        echo "Hello"
