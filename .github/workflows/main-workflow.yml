@@ -31,8 +31,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2  # Checkout the repository to access the 'actions' directory
 
-      #- name: Print message 
-      #  uses: ./actions
+      - name: Print message 
+        uses: ./actions
 
       
       #- name: Checkout code
